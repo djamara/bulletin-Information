@@ -1,44 +1,21 @@
 <div class="scrollbar scrollbar-danger">
 
-    <table class="table table-bordered table-striped mb-0 force-overflow">
+    <table class="table table-bordered table-striped mb-0">
       <thead class="bg-danger text-white">
         <tr>
-          <th scope="col"></th>
+          <th scope="col">DATE</th>
           <th scope="col" class="text text-center ">PROJET</th>
           <th scope="col" class="text text-center ">INFORMATIONS</th>
         </tr>
       </thead>
       <tbody class="">
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-        </tr>
+        <ng-container *ngFor="let activite of activites">
+          <tr>
+            <td scope="row" width="120px">{{activite.date_activite}}</td>
+            <td class="text font-weight-bolder">{{activite.projet['projet_libelle']}}</td>
+            <td>{{activite.activite_actualite}}</td>
+          </tr>
+        </ng-container>
       </tbody>
     </table>
 </div>

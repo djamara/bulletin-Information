@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,8 +28,9 @@ import { ImageCarousselComponent } from './image-caroussel/image-caroussel.compo
     InfoProjetComponent,
     ImageCarousselComponent
   ],
-  
+
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot()

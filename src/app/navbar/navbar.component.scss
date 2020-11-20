@@ -28,24 +28,26 @@ p {
   color: #263251
 }
 
+
 .toolbar {
   
   top: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 90px;
   display: flex;
   align-items: center;
   background-color: #dd111f;
   color: white;
   font-weight: 600;
-  padding-left: 11px;
+  //padding-left: 11px;
+  padding: 10px;
   box-shadow: 5px 10px 20px grey;
   margin-bottom: 35px;
 }
 
 .toolbar img {
-  margin: 0 16px;
+  margin: 0;
 }
 
 .toolbar #twitter-logo {

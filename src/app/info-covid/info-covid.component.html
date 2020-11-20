@@ -1,15 +1,21 @@
-<div class="border border-top-0 border-danger rounded-bottom">
-    <h6 class="text text-right bg-danger text-white">Date: <span class="text text-white">31/10/2020</span> </h6>
+<div class="border border-top-0 border-danger pl-2 rounded-bottom">
+    <h6 class="text text-right bg-danger text-white">Date: <span class="text text-white">{{bilanCovid.bilanCovid_date}}</span> </h6>
     <div>
-        <h6 class="text">Nombre de nouveaux cas : <span class="badge badge-danger badge-pill">1744</span></h6>
+        <h6 class="text">Nombre de nouveaux cas : <span class="badge badge-danger badge-pill">{{bilanCovid.bilanCovid_nbre_infectes}}</span></h6>
     </div>
     <div>
-        <h6 class="text">Nombre de guérris : <span class="badge badge-danger badge-pill">154</span></h6>
+        <h6 class="text">Nombre de guéris : <span class="badge badge-danger badge-pill">{{bilanCovid.bilanCovid_gueris}}</span></h6>
     </div>
     <div>
-        <h6 class="text">Nombre de décès : <span class="badge badge-danger badge-pill">4</span></h6>
+        <h6 class="text">Nombre de décès : <span class="badge badge-danger badge-pill">{{bilanCovid.bilanCovid_deces}}</span></h6>
     </div>
     <div>
-        <h6 class="text">Nombre de cas actifs : <span class="badge badge-danger badge-pill">144</span></h6>
+        <p>Depuis le debut de la pandémie, nous enregistrons :</p>
+        <ul>
+          <li><span class="badge badge-danger badge-pill">589</span> &nbsp; cas actifs</li>
+          <li><span class="badge badge-danger badge-pill">2569</span> &nbsp; infectés</li>
+          <li><span class="badge badge-danger badge-pill">3878</span> &nbsp; guéris</li>
+          <li><span class="badge badge-danger badge-pill">47</span> &nbsp; décédés</li>
+        </ul>
     </div>
 </div>

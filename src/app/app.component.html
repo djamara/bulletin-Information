@@ -1,16 +1,16 @@
 
 <app-navbar></app-navbar>
-<div class="row col-12">
+<div class="row col-12" style="margin: 0;">
     <div class="col-sm-4" style="padding-right: 0px;">
-        <app-card></app-card>
-        <hr class="my-3">
-        <div class="row text" id="nombrecas">
-            <h1 class="">2053</h1>
-            <h4>nouveaux cas</h4>
+        <div class="border border-danger border-bottom-0">
+            <h3 class="text text-center text-danger">News !!!</h3>
         </div>
-        <app-tablecovid></app-tablecovid> 
+        <app-info-projet></app-info-projet>
+        <hr class="my-3">
+
+        <app-tablecovid></app-tablecovid>
     </div>
-    <div class="col-sm-8" style="padding-left: 0px;">
+    <div class="col-sm-8" style="padding: 0px;">
         <app-videocomponent></app-videocomponent>
     </div>
 </div>
@@ -20,12 +20,9 @@
         <app-image-caroussel></app-image-caroussel>
     </div>
     <div class="col-sm-4" style="padding-right: 0px;">
-        <div class="border border-danger border-bottom-0">
-            <h3 class="text text-center text-danger">News !!!</h3>
-        </div>
-        <app-info-projet></app-info-projet>
+        <app-card></app-card>
     </div>
-    
+
 </div>
 <div >
     <app-footer></app-footer>

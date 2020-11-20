@@ -2,42 +2,14 @@
 <div id="carousel-thumb" class="carousel slide carousel-thumbnails" data-ride="carousel">
     <!--/.Controls-->
     <!--Slides-->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" *ngFor="let image of images">
         <div class="carousel-item active">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" class="d-block w-100" alt="...">
+            <img src='{{image.image}}' class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h5>Don de véhicules par le CICR au CRCI</h5>
+              <p>La Communauté internationale de Croix rouge a fait un don de véhicule automobile à la croix-rouge Côte d'Ivoire</p>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(75).jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>fourth slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(128).jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>fifth slide label</h5>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </div>
-          </div>
     </div>
     <!--/.Slides-->
     <!--Controls-->
@@ -66,6 +38,6 @@
             <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(128).jpg" width="100">
           </li>
       </ol>
-    
+
   </div>
   <!--/.Carousel Wrapper-->

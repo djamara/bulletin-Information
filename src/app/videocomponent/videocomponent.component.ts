@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService, VideoInterface} from '../video.service';
 
 @Component({
   selector: 'app-videocomponent',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videocomponent.component.scss']
 })
 export class VideocomponentComponent implements OnInit {
-
-  constructor() { }
+  videoInterface: VideoInterface;
+  listVideo = [];
+  constructor(private videoService: VideoService) { }
 
   ngOnInit(): void {
+    console.log('Bonjour Mr');
+    this.showVideo();
   }
+
+  // tslint:disable-next-line:typedef
+  showVideo(){
+    this.videoService.getVideo().subscribe((data: any[] ) => {
+      console.log(data);
+      this.listVideo = data;
+    });
+  }
+
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SlideserviceService} from '../slideservice.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-image-caroussel',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageCarousselComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private slideService: SlideserviceService) { }
+  images = [];
   ngOnInit(): void {
+      this.slideService.getSlide().subscribe((data: any[]) => {
+        console.log(data);
+        this.images = data;
+    });
   }
 
 }

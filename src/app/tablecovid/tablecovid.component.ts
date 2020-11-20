@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WavesModule, TableModule } from 'ng-uikit-pro-standard';
+import {BilanActiviteService} from '../bilan-activite.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tablecovid',
@@ -8,9 +10,14 @@ import { WavesModule, TableModule } from 'ng-uikit-pro-standard';
 })
 export class TablecovidComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bilanActiviteService: BilanActiviteService) { }
+  bilanActivites = [];
 
   ngOnInit(): void {
+    this.bilanActiviteService.getBilanActivite().subscribe((data: any[]) => {
+      console.log(data);
+      this.bilanActivites = data;
+    });
   }
 
 }
