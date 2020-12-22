@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {InfoServiceService} from '../info-service.service';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private infoService: InfoServiceService) { }
+
+  informations = [];
 
   ngOnInit(): void {
+    this.infoService.getInfo().subscribe((data: any[]) => {
+        this.informations = data;
+        console.log(this.informations);
+    });
   }
 
 }

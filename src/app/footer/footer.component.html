@@ -4,14 +4,13 @@
         <h6 class="text text-center text-sm">INFORMATIONS</h6>
       </div>
       <div class="col-9" id="textInformation">
-        <marquee>Don du CICR au CRCI de véhicules roulants receptionné par le président national le Dr Dah Leonce 
-                <img src="../../assets/images/logoCroix.jpg" width="20px"> 
-                Formartion de volontaires sécouriste dans la zone d'aAbidjan yopougon wassakara
-                <img src="../../assets/images/logoCroix.jpg" width="20px"> 
-                Don de kit par le bureau national aux comités locaux dans le cadre de la bonne gouvernance
-                <img src="../../assets/images/logoCroix.jpg" width="20px"> 
+        <marquee >
+                <p *ngFor="let information of informations" class="text d-lg-inline">
+                  {{ information['informations_description'] }}
+                  <img src="../../assets/images/logoCroix.jpg" width="20px">
+                </p>
         </marquee>
       </div>
   </div>
-  
+
 </footer>

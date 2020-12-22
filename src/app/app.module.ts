@@ -15,6 +15,12 @@ import { InfoCovidComponent } from './info-covid/info-covid.component';
 import { InfoProjetComponent } from './info-projet/info-projet.component';
 import { ImageCarousselComponent } from './image-caroussel/image-caroussel.component';
 
+import {  LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +41,7 @@ import { ImageCarousselComponent } from './image-caroussel/image-caroussel.compo
     AppRoutingModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'fr-CA' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

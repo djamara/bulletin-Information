@@ -12,11 +12,16 @@ export class InfoCovidComponent implements OnInit {
   infectes;
   gueris;
   decedes;
+  date;
 
   ngOnInit(): void {
     this.bilanCovidService.getBilanCovid().subscribe((data: any[]) => {
-      console.log(data[0]);
+      console.log(data[0].bilanCovid_date);
       this.bilanCovid = data[0];
+      this.date = data[0].bilanCovid_date;
+      this.infectes = data[0].bilanCovid_nbre_infectes;
+      this.gueris = data[0].bilanCovid_gueris;
+      this.decedes = data[0].bilanCovid_deces;
     });
   }
 
