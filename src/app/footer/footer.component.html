@@ -4,7 +4,7 @@
         <h6 class="text text-center text-sm">INFORMATIONS</h6>
       </div>
       <div class="col-9" id="textInformation">
-        <marquee >
+        <marquee behaviour = "scroll" scrollamount="4" >
                 <p *ngFor="let information of informations" class="text d-lg-inline">
                   {{ information['informations_description'] }}
                   <img src="../../assets/images/logoCroix.jpg" width="20px">
