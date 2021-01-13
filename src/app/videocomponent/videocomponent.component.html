@@ -13,8 +13,9 @@
         <div class="col-sm-12 scrollbar scrollbar-danger" id="zonelist">
             <h5 class="h5 text-center mt-1 mb-2">Liste des vidéos</h5>
             <div class="" *ngFor="let video of listVideo"> <!--force-overflow-->
-                <a href="{{video.video_lien}}" class="list-group-item list-group-item-action">
-                    <img src="assets/icons/icons-video.png" alt="placeholder" class="img-fluid" width="40px">
+                <a href="{{video.video_lien.url}}" class="list-group-item list-group-item-action">
+                    <!--<img src="assets/icons/icons-video.png" alt="placeholder" class="img-fluid" width="40px">-->
+                    <img src="{{video.video_lien.image}}" alt="placeholder" class="img-fluid" width="40px">
                     {{video.video_titre}}
                     <span class="badge badge-primary badge-pill">{{video.idvideo}}</span>
                 </a>
