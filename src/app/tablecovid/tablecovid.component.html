@@ -1,19 +1,24 @@
 <div class="row text" id="nombrecas">
   <h1 class=""></h1>
-  <h6>Les chiffres des activités effectuées</h6>
+  <h6>Bilan des activités du mois de Janvier</h6>
 </div>
 <table class="table table-responsive table-streaped" id="tablecovid" >
     <thead class="thead-white bg-gray">
       <tr>
-        <th scope="col">Activités</th>
-        <th scope="col">Nombre</th>
+        <th scope="col">Projet</th>
+        <th scope="col">Activité</th>
+        <th scope="col">Total</th>
       </tr>
     </thead>
     <tbody class="text">
     <ng-container *ngFor="let bilan of bilanActivites">
       <tr>
+        <td class="text text-left">MOFA</td>
         <td class="text text-left" style="width: 350px">{{bilan.bilanActivite_libelle}}</td>
         <td class="text text-right text-danger">{{bilan.bilanActivite_nbre}}</td>
+        <td class="text text-right text-danger">
+          <button class="btn btn-sm btn-circle btn-outline-danger">detail</button>
+        </td>
       </tr>
     </ng-container>
     </tbody>

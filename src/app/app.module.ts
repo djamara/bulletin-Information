@@ -18,6 +18,7 @@ import { ImageCarousselComponent } from './image-caroussel/image-caroussel.compo
 import {  LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { InfoProjetMensuelComponent } from './info-projet-mensuel/info-projet-mensuel.component';
 
 registerLocaleData(localeFr);
 
@@ -32,14 +33,15 @@ registerLocaleData(localeFr);
     CardComponent,
     InfoCovidComponent,
     InfoProjetComponent,
-    ImageCarousselComponent
+    ImageCarousselComponent,
+    InfoProjetMensuelComponent
   ],
 
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr-CA' } ],
   bootstrap: [AppComponent]
