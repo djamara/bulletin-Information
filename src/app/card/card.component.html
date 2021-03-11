@@ -1,10 +1,8 @@
 <div class="card" style="width: 20rem; margin:auto;">
-    <img class="card-img-top" src="../../assets/images-crci/ministre.jpg" alt="Card image cap">
+    <img class="card-img-top" src="{{cardActualite.image}}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Journée de sensibilisation</h5>
-      <p class="card-text">Journée de sensibilisation des députés ivoiriens
-        sur l'utilisation et la protection de l'emblème Croix-Rouge
-        hier mercredi 07 Octobre 2020 au palm club...</p>
+      <h5 class="card-title">{{cardActualite.actualite_titre | uppercase}}</h5>
+      <p class="card-text">{{cardActualite.actualite_description}}</p>
 <!--      <a href="#" class="btn btn-danger">Tell something</a>-->
     </div>
 </div>

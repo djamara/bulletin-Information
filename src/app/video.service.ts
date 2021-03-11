@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {from, Observable} from 'rxjs';
+import {environment} from '../environments/environment';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ export class VideoService {
 
   }
 
-  private videoUrl = 'http://localhost:8000/api/video';  // URL to web api
+  private videoUrl = environment.serveur_name + 'video';  // URL to web api
 
   /** GET video from the server */
   // tslint:disable-next-line:typedef

@@ -9,7 +9,7 @@ import {CardServiceService} from '../card-service.service';
 export class CardComponent implements OnInit {
 
   constructor(private cardService: CardServiceService) { }
-  cardActualite = [];
+  cardActualite ;
 
   ngOnInit(): void {
     this.getCard();
